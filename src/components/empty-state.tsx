@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 
 export default function EmptyState() {
+  console.log("test log");
   return (
     <div
       className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm"
