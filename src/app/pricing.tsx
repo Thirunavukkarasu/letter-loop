@@ -4,7 +4,7 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-20 bg-white text-gray-900">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-12">Pricing</h2>
+        <h2 className="text-4xl font-bold mb-12">Pricing Plans</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-6 border border-gray-200 rounded-lg">
             <h3 className="text-2xl font-semibold mb-4">Basic</h3>

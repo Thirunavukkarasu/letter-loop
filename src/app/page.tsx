@@ -19,7 +19,7 @@ export default async function Home() {
         <Navbar />
         <HeroSection />
         <Features />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Pricing />
         <Faqs />
         <Cta />
