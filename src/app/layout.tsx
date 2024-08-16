@@ -11,8 +11,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Newsletters App",
-  description: "Get the best newsletter design for your business.",
+  title: "LetterLoop",
+  description:
+    "LetterLoop simplifies the way you create, send, and track newsletters. Start today and enhance your email campaigns.",
 };
 
 export default function RootLayout({
