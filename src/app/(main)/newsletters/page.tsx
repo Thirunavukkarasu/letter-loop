@@ -1,9 +1,9 @@
 import Page from "@/components/page";
 
-export default function Settings() {
+export default function Newsletters() {
   return (
-    <Page title="Settings">
-      <p>This is a settings page</p>
+    <Page title="Newsletters">
+      <p>This is a Newsletters page</p>
     </Page>
   );
 }

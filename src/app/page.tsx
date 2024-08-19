@@ -11,6 +11,8 @@ import Cta from "./cta";
 import Features from "./features";
 import HeroSection from "./hero-section";
 import Navbar from "./navbar";
+import FeatureSection from "./features-v2";
+import FAQSection from "./faqs-v2";
 
 export default async function Home() {
   return (
@@ -18,10 +20,10 @@ export default async function Home() {
       <div className="max-w-5xl mx-auto">
         <Navbar />
         <HeroSection />
-        <Features />
+        <FeatureSection />
         {/* <Testimonials /> */}
         <Pricing />
-        <Faqs />
+        <FAQSection />
         <Cta />
         <Footer />
       </div>
