@@ -2,21 +2,21 @@ import Page from "@/components/page";
 import prismadb from "@/lib/db";
 import { DataTable } from "@/components/data-table";
 
-export default async function Newsletters() {
-  const newsletters = await prismadb.newsletters.findMany();
-  console.log(newsletters);
+export default async function Subscribers() {
+  const subscribers = await prismadb.subscribers.findMany();
+  console.log(subscribers);
 
   return (
-    <Page title="Newsletters">
-      <p>This is a Newsletters page</p>
+    <Page title="Subscribers">
+      <p>This is a Subscribers page</p>
       <DataTable
         columns={[
           { header: "ID", accessorKey: "id" },
-          { header: "Name", accessorKey: "name" },
+          { header: "Email", accessorKey: "email" },
           { header: "Created At", accessorKey: "createdAt" },
           { header: "Updated At", accessorKey: "updatedAt" },
         ]}
-        data={newsletters}
+        data={subscribers}
       />
     </Page>
   );

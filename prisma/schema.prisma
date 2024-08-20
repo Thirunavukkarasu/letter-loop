@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
+}
+
+model Users {
+  id                String    @id @default(cuid())
+  email             String?   @unique
+  createdAt         DateTime  @default(now()) @map("created_at")
+  updatedAt         DateTime? @updatedAt @map("updated_at")
+  billingAddress    Json?     @map("billing_address")
+  billingCustomerId String?   @map("billing_customer_id")
+  features          Json?
+  firstName         String?   @map("first_name")
+  formCount         Int?      @map("form_count")
+  fullName          String?   @map("full_name")
+  kind              String?
+  lastName          String?   @map("last_name")
+  planId            String?   @map("plan_id")
+  planName          String?   @map("plan_name")
+  registeredOn      DateTime  @default(now()) @map("registered_on")
+  verified          Boolean   @default(false)
+  avatar            String?
+  language          String?
+  timezone          String?
+  title             String?
+
+  @@map("users")
+}
+
+model Newsletters {
+  id          String        @id @default(nanoid(8))
+  name        String
+  status      String        @default("created")
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+  subscribers Subscribers[] @relation("subscribersToNewsletters")
+  userId      String        @map("user_id")
+
+  @@index([id])
+  @@map("newsletters")
+}
+
+model Subscribers {
+  id          String        @id @default(nanoid(8))
+  email       String
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+  newsletters Newsletters[] @relation("subscribersToNewsletters")
+
+  @@map("subscribers")
+}
