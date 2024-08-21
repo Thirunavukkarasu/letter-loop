@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { GithubIcon } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 export default function HeroSection() {
@@ -18,7 +19,9 @@ export default function HeroSection() {
           Start today and enhance your email campaigns.
         </p>
         <div className="space-x-4">
-          <Button>Get Started</Button>
+          <Link href="/dashboard">
+            <Button>Get Started</Button>
+          </Link>
           <Button asChild variant={"outline"}>
             <a href="https://github.com/thirunavukkarasu/letter-loop">
               {/* <GithubIcon size={12} /> */}

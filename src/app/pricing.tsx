@@ -11,7 +11,7 @@ export default function Pricing() {
             <p className="text-4xl font-bold mb-4">$0</p>
             <p className="mb-4">Get started with essential features.</p>
             <a
-              href="#"
+              href="/dashboard"
               className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded"
             >
               Start Free
